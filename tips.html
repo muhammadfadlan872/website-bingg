@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>English Learning Tips with Animation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #80deea);
+            margin: 20px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .tips-container {
+            max-width: 600px;
+            background-color: #ffffffdd;
+            margin: auto;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+        }
+        .tips-container h2 {
+            text-align: center;
+            color: #0077cc;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            animation: fadeSlideDown 1s ease forwards;
+            opacity: 0;
+        }
+        .tip-item {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeSlideUp 0.8s ease forwards;
+        }
+        .tip-item::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #0077cc;
+            font-weight: bold;
+            font-size: 1.3rem;
+            top: 2px;
+        }
+        .tip-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeSlideDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Delay each tip */
+        .tip-item:nth-child(1) {
+            animation-delay: 0.6s;
+        }
+        .tip-item:nth-child(2) {
+            animation-delay: 1.2s;
+        }
+        .tip-item:nth-child(3) {
+            animation-delay: 1.8s;
+        }
+        .tip-item:nth-child(4) {
+            animation-delay: 2.4s;
+        }
+        .tip-item:nth-child(5) {
+            animation-delay: 3s;
+        }
+
+        /* Delay for title */
+        .tips-container h2 {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="tips-container">
+        <h2>English Learning Tips</h2>
+        <div class="tip-item">Practice listening every day, such as watching English movies or podcasts.</div>
+        <div class="tip-item">Read books, articles, or news in English to expand your vocabulary.</div>
+        <div class="tip-item">Practice speaking with friends or tutors to improve pronunciation and fluency.</div>
+        <div class="tip-item">Use English learning apps regularly for structured practice.</div>
+        <div class="tip-item">Don't be afraid to make mistakes, as mistakes are part of the learning process.</div>
+    </div>
+</body>
+</html>
+
+
